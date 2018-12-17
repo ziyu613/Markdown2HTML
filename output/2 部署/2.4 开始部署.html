@@ -1,0 +1,25 @@
+<p>部署前，请再次检查以下内容：</p>
+<ul>
+<li>平台部署涉及到的所有虚拟机是否能互相连通</li>
+</ul>
+<p>使用 ping 命令测试</p>
+<p><code>shell
+  ping 10.0.0.1</code></p>
+<ul>
+<li>再次检查配置，确保配置文件与规划服务器一致，防止错装，漏装</li>
+</ul>
+<h3>开始部署</h3>
+<ol>
+<li>切换到部署文件夹路径</li>
+</ol>
+<p><code>shell
+   cd /geocloud/geocloud-deploy</code></p>
+<ol>
+<li>使用以下命令进行安装</li>
+</ol>
+<p><code>shell
+   fab install</code></p>
+<p>请耐心等待，待控制台输出：</p>
+<p><code>-----------国土空间基础信息平台部署完成 ------</code></p>
+<p>则表明安装成功。</p>
+<p>若出现异常中断，请查看控制台输出日志。</p>

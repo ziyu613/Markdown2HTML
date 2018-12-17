@@ -1,0 +1,67 @@
+<h3>系统服务相关</h3>
+<blockquote>
+<p>要使用此命令，软件必须得加入到<em>systemctl</em> 服务管理中</p>
+</blockquote>
+<ul>
+<li>启动某服务</li>
+</ul>
+<p>```shell
+  sudo systemctl start <service-name></p>
+<p>#比如tomcat
+  sudo systemctl start tomcat
+  ```
+- 关闭某服务</p>
+<p>```shell
+  sudo systemctl stop <service-name></p>
+<p>#比如tomcat
+  sudo systemctl stop tomcat
+  ```
+- 查看某服务状态</p>
+<p>```shell
+  sudo systemctl status <service-name></p>
+<p>#比如tomcat
+  sudo systemctl status tomcat
+  ```</p>
+<ul>
+<li>设置某服务开机启动</li>
+</ul>
+<p>```shell
+  sudo systemctl enable <service-name></p>
+<p>#比如tomcat
+  sudo systemctl enable tomcat
+  ```</p>
+<h3>防火墙</h3>
+<ul>
+<li>开启、关闭、禁用防火墙</li>
+</ul>
+<p>```shell
+  #开启
+  systemctl start firewalld.service</p>
+<p>#关闭
+  systemctl stop firewalld.service</p>
+<p>#禁用
+  systemctl disable firewalld.service
+  ```</p>
+<ul>
+<li>开启某端口号</li>
+</ul>
+<p><code>shell
+  firewall-cmd --zone=public --add-port=80/tcp --permanent
+  firewall-cmd --reload</code></p>
+<h3>磁盘</h3>
+<ul>
+<li>查看分区大小</li>
+</ul>
+<p><code>shell
+  df -h</code></p>
+<ul>
+<li>查看当前目录占用空间大小</li>
+</ul>
+<p><code>shell
+  du -h --max-depth=1 ./</code></p>
+<h3>主机相关</h3>
+<ul>
+<li>修改主机名</li>
+</ul>
+<p><code>shell
+  hostnamectl set-hostname &lt;host-name&gt;</code></p>
